@@ -1,7 +1,8 @@
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
+
+import org.testng.annotations.Test;
 
 public class FindMaxMin {
 	
@@ -29,6 +30,7 @@ public class FindMaxMin {
 		return a[0];
 		
 	}
+	
 	public static Integer aniket_Max_Min_ArrayList(List<Integer> A,char H_OR_L) {
 		switch(H_OR_L) {
 		case 'L':Collections.sort(A);break;
@@ -37,13 +39,13 @@ public class FindMaxMin {
 		}
 		return  A.get(0);
 	}
-
+	@Test
 	public static void main(String[] args) {
 		int a[]= {5,8,6,8,0,7,5,8,8,8,5,4,588,5,5545,65,7646467,554545,66668464,5,66,454565,6544564,64948,65513354,698448949,684484,65464,65464,65464,6554654,6546,65465,65456,786546,32153,646,84,6565,68464,65464,6465,54564,31235,68464,68496,4646};
 		System.out.println(aniket_Max_Min_array(a,'L'));
 		
 		List<Integer> A = Arrays.asList(5,8,6,8,0,7,5,8,8,8,5,4,588,5,5545,65,7646467,554545,66668464,5,66,454565,6544564,64948,65513354,698448949,684484,65464,65464,65464,6554654,6546,65465,65456,786546,32153,646,84,6565,68464,65464,6465,54564,31235,68464,68496,4646);		
-		System.out.println(aniket_Max_Min_ArrayList(A,'H'));
+		System.out.println(aniket_Max_Min_ArrayList(A,'H'));	
 	}
 	
 }
