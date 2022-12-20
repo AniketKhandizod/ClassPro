@@ -21,7 +21,7 @@ public class InvokingBrowser {
 			WebDriverManager.edgedriver().setup();
 			driver = new EdgeDriver();
 		} else if (browser.equals("C")) {
-			WebDriverManager.chromedriver().setup();
+			System.setProperty("webdriver.chrome.driver", "C:\\Users\\anike\\Desktop\\Grid\\chromedriver.exe");
 			driver = new ChromeDriver();
 		} else if (browser.equals("F")) {
 			WebDriverManager.firefoxdriver().setup();

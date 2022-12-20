@@ -13,13 +13,13 @@ public class TestLogin {
 	public void CheckLOgin() {
 
 		String URL = "https://www.facebook.com/login/device-based/regular/login/?login_attempt=1&lwv=100";
-		driver = InvokingBrowser.invokingBowser("F", URL);
+		driver = InvokingBrowser.invokingBowser("C", URL);
 		LoginPage ABC = PageFactory.initElements(driver, LoginPage.class);
 		ABC.LoginFB("Aniket", "Aniket");
 
 	}
 
-	@Test
+	
 	public void ErrorMassage() {
 		String URL = "https://www.facebook.com/login/device-based/regular/login/?login_attempt=1&lwv=100";
 		driver = InvokingBrowser.invokingBowser("E", URL);
@@ -27,10 +27,10 @@ public class TestLogin {
 		Assert.assertNotEquals(ABC.GetErrorMassage(), "No search results");
 	}
 
-	@Test
+	
 	public void validateloginErrormassage() {
 		String URL = "https://www.facebook.com/login/device-based/regular/login/?login_attempt=1&lwv=100";
-		driver = InvokingBrowser.invokingBowser("E", URL);
+		driver = InvokingBrowser.invokingBowser("C", URL);
 		LoginPage ABC = PageFactory.initElements(driver, LoginPage.class);
 		String S = ABC.LoginFBAndClick("Aniket", "Aniket");
 		Assert.assertNotEquals(S, "No search results");
